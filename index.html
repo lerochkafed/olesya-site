@@ -473,24 +473,48 @@
         </div>
     </section>
 
-    <!-- HORNY ONLINE — фото стало шире -->
-    <section style="background:#FFF;" id="project">
-        <div class="container">
-            <span class="section-label">Проект</span>
-            <h2>Horny <em>Online</em></h2>
-            <div class="divider"></div>
-            <p style="color:var(--text-muted); margin-bottom:20px; letter-spacing:1px;">ГРУППОВОЙ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ</p>
-            <div class="photo-wrapper landscape-wide">
-                <img src="images/photo-project.jpg" alt="Horny Online">
-                <div class="overlay"></div>
+    <!-- HORNY ONLINE — фото на всю страницу с дымкой и текстом поверх -->
+<section style="background:#FFF; padding:0; position:relative; overflow:hidden;" id="project">
+    <!-- Фото на всю ширину -->
+    <div style="position:relative; width:100%; height:85vh; min-height:500px; overflow:hidden;">
+        <img src="images/photo-project.jpg" alt="Horny Online" style="width:100%; height:100%; object-fit:cover;">
+        <!-- Чёрная дымка -->
+        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.6); z-index:1;"></div>
+        
+        <!-- Текст поверх -->
+        <div style="position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px;">
+            <span class="section-label" style="color:var(--red-neon); border-color:var(--red-neon);">Проект</span>
+            <h2 style="color:#fff; margin-bottom:16px;">Horny <em style="color:var(--red-neon);">Online</em></h2>
+            <p style="color:#CCC; font-size:1.1rem; letter-spacing:1px; margin-bottom:40px; max-width:600px;">ГРУППОВОЙ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ ПО ИЗУЧЕНИЮ СЕКСУАЛЬНОСТИ</p>
+            
+            <!-- Две карточки рядом -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:700px; width:100%;">
+                <div style="background:rgba(20,20,20,0.8); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); padding:28px 22px; text-align:left;">
+                    <span class="tag" style="margin-bottom:10px;">От 4 человек</span>
+                    <h3 style="color:#fff; font-size:1.2rem; text-transform:uppercase; font-weight:900; margin-bottom:6px;">1 месяц / 4 созвона</h3>
+                    <p style="color:#BBB; font-size:0.9rem;">Из любой точки мира.</p>
+                    <p style="margin-top:10px;"><strong style="color:var(--red-neon);">ТЕОРИЯ + ПРАКТИКА</strong></p>
+                    <p style="color:#BBB; font-size:0.85rem;">Лекции, обсуждения, домашние задания</p>
+                </div>
+                <div style="background:rgba(20,20,20,0.8); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); padding:28px 22px; text-align:left;">
+                    <h4 style="color:var(--red-neon); letter-spacing:2px; margin-bottom:10px; font-size:0.75rem;">ТЕМЫ ПРОЕКТА:</h4>
+                    <ul style="color:#CCC; list-style:none; line-height:2; font-size:0.9rem;">
+                        <li>— Сексуальность</li>
+                        <li>— Либидо</li>
+                        <li>— Оргазмы</li>
+                        <li>— Коммуникация</li>
+                        <li>— Близость</li>
+                    </ul>
+                </div>
             </div>
-            <div class="grid-2" style="margin-top:20px;">
-                <div class="card"><span class="tag">От 4 человек</span><h3>1 месяц / 4 созвона</h3><p style="color:var(--text-muted);">Из любой точки мира.</p><p style="margin-top:10px;"><strong>ТЕОРИЯ + ПРАКТИКА</strong></p></div>
-                <div class="card"><h4 style="color:var(--red); letter-spacing:2px; margin-bottom:10px;">ТЕМЫ:</h4><ul style="color:var(--text-muted); list-style:none; line-height:2;"><li>— Сексуальность</li><li>— Либидо</li><li>— Оргазмы</li><li>— Коммуникация</li><li>— Близость</li></ul></div>
+            
+            <!-- Кнопка -->
+            <div style="margin-top:36px;">
+                <a href="https://t.me/olesex_olesex" target="_blank" class="cta-btn" style="background:var(--red-neon); border-color:var(--red-neon); color:#000;">Написать в Telegram</a>
             </div>
-            <div class="cta-block"><a href="https://t.me/olesex_olesex" target="_blank" class="cta-btn">Написать в Telegram</a></div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ДИПЛОМЫ -->
     <section class="bg-black" id="diplomas">
