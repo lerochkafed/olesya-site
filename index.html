@@ -476,29 +476,30 @@
     <!-- HORNY ONLINE — фото на всю страницу с дымкой и текстом поверх -->
 <section style="background:#FFF; padding:0; position:relative; overflow:hidden;" id="project">
     <!-- Фото на всю ширину -->
-    <div style="position:relative; width:100%; height:85vh; min-height:500px; overflow:hidden;">
-        <img src="images/photo-project.jpg" alt="Horny Online" style="width:100%; height:100%; object-fit:cover;">
-        <!-- Чёрная дымка -->
-        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.6); z-index:1;"></div>
+    <div style="position:relative; width:100%; min-height:100vh; overflow:hidden;">
+        <img src="images/photo-project.jpg" alt="Horny Online" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;">
+        <!-- Чёрная дымка — стала легче -->
+        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.45); z-index:1;"></div>
         
         <!-- Текст поверх -->
-        <div style="position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px;">
+        <div style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 24px; min-height:100vh;">
             <span class="section-label" style="color:var(--red-neon); border-color:var(--red-neon);">Проект</span>
-            <h2 style="color:#fff; margin-bottom:16px;">Horny <em style="color:var(--red-neon);">Online</em></h2>
-            <p style="color:#CCC; font-size:1.1rem; letter-spacing:1px; margin-bottom:40px; max-width:600px;">ГРУППОВОЙ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ ПО ИЗУЧЕНИЮ СЕКСУАЛЬНОСТИ</p>
+            <h2 style="color:#fff; margin-bottom:12px; font-size:clamp(2rem,5vw,3.4rem);">Horny <em style="color:var(--red-neon);">Online</em></h2>
+            <p style="color:#EEE; font-size:clamp(0.85rem,1.5vw,1.1rem); letter-spacing:1px; margin-bottom:36px; max-width:600px;">ГРУППОВОЙ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ ПО ИЗУЧЕНИЮ СЕКСУАЛЬНОСТИ</p>
             
             <!-- Две карточки рядом -->
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:700px; width:100%;">
-                <div style="background:rgba(20,20,20,0.8); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); padding:28px 22px; text-align:left;">
-                    <span class="tag" style="margin-bottom:10px;">От 4 человек</span>
-                    <h3 style="color:#fff; font-size:1.2rem; text-transform:uppercase; font-weight:900; margin-bottom:6px;">1 месяц / 4 созвона</h3>
-                    <p style="color:#BBB; font-size:0.9rem;">Из любой точки мира.</p>
-                    <p style="margin-top:10px;"><strong style="color:var(--red-neon);">ТЕОРИЯ + ПРАКТИКА</strong></p>
-                    <p style="color:#BBB; font-size:0.85rem;">Лекции, обсуждения, домашние задания</p>
+            <div class="horny-cards" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:700px; width:100%;">
+                <div style="background:rgba(20,20,20,0.75); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); padding:24px 20px; text-align:left;">
+                    <span class="tag" style="margin-bottom:8px;">От 4 человек</span>
+                    <h3 style="color:#fff; font-size:clamp(1rem,1.5vw,1.2rem); text-transform:uppercase; font-weight:900; margin-bottom:4px;">1 месяц</h3>
+                    <h3 style="color:#fff; font-size:clamp(1rem,1.5vw,1.2rem); text-transform:uppercase; font-weight:900; margin-bottom:6px;">4 созвона</h3>
+                    <p style="color:#CCC; font-size:0.85rem;">Из любой точки мира.</p>
+                    <p style="margin-top:8px;"><strong style="color:var(--red-neon); font-size:0.85rem;">ТЕОРИЯ + ПРАКТИКА</strong></p>
+                    <p style="color:#CCC; font-size:0.8rem;">Лекции, обсуждения, домашние задания</p>
                 </div>
-                <div style="background:rgba(20,20,20,0.8); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); padding:28px 22px; text-align:left;">
-                    <h4 style="color:var(--red-neon); letter-spacing:2px; margin-bottom:10px; font-size:0.75rem;">ТЕМЫ ПРОЕКТА:</h4>
-                    <ul style="color:#CCC; list-style:none; line-height:2; font-size:0.9rem;">
+                <div style="background:rgba(20,20,20,0.75); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); padding:24px 20px; text-align:left;">
+                    <h4 style="color:var(--red-neon); letter-spacing:2px; margin-bottom:8px; font-size:0.7rem;">ТЕМЫ ПРОЕКТА:</h4>
+                    <ul style="color:#CCC; list-style:none; line-height:2; font-size:0.85rem; padding-left:0;">
                         <li>— Сексуальность</li>
                         <li>— Либидо</li>
                         <li>— Оргазмы</li>
@@ -509,12 +510,23 @@
             </div>
             
             <!-- Кнопка -->
-            <div style="margin-top:36px;">
+            <div style="margin-top:32px;">
                 <a href="https://t.me/olesex_olesex" target="_blank" class="cta-btn" style="background:var(--red-neon); border-color:var(--red-neon); color:#000;">Написать в Telegram</a>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Адаптивные стили для карточек Horny -->
+<style>
+    @media (max-width: 600px) {
+        .horny-cards {
+            grid-template-columns: 1fr !important;
+            gap: 12px !important;
+            max-width: 400px !important;
+        }
+    }
+</style>
 
     <!-- ДИПЛОМЫ -->
     <section class="bg-black" id="diplomas">
