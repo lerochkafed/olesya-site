@@ -134,12 +134,10 @@
         }
         .price-big span { font-size: 0.75rem; color: var(--text-muted); font-weight: 400; font-family: var(--font-body); letter-spacing: 1px; }
 
+        /* ===== ФОТО С ЧЁРНОЙ ДЫМКОЙ ===== */
         .photo-wrapper {
             position: relative; overflow: hidden; margin-bottom: 18px; border: 1px solid #E8E0D8;
         }
-        .photo-wrapper.portrait { height: 380px; }
-        .photo-wrapper.landscape { height: 240px; }
-        .photo-wrapper.vertical { height: 400px; }
         .photo-wrapper img {
             width: 100%; height: 100%; object-fit: cover;
             transition: transform 0.6s ease, filter 0.6s ease;
@@ -152,6 +150,24 @@
         }
         .photo-wrapper:hover .overlay { opacity: 0; }
         .photo-wrapper:hover img { transform: scale(1.03); filter: brightness(1.15); }
+
+        /* Вертикальное фото — высокое */
+        .photo-wrapper.portrait-tall {
+            height: 500px;
+        }
+        /* Горизонтальное фото — широкое */
+        .photo-wrapper.landscape-wide {
+            height: 300px;
+        }
+        /* Обычное вертикальное */
+        .photo-wrapper.vertical {
+            height: 400px;
+        }
+        /* Обычное горизонтальное */
+        .photo-wrapper.landscape {
+            height: 240px;
+        }
+
         .bg-black .photo-wrapper { border-color: #2A2A2A; }
         .bg-black .photo-wrapper .overlay { background: rgba(0,0,0,0.5); }
         .photo-wrapper.no-overlay { border: 1px solid #2A2A2A; }
@@ -290,6 +306,7 @@
         .bg-black .review-name { color: #fff; border-color: #2A2A2A; }
         .bg-black .carousel-dot { background: #444; }
 
+        /* ===== АДАПТИВ ===== */
         @media (max-width: 1024px) {
             .nav-logo { margin-right: 24px; }
             .diploma-grid { grid-template-columns: repeat(2, 1fr); }
@@ -310,13 +327,16 @@
             .acc-body-grid { grid-template-columns: 1fr; }
             .review-card { flex: 0 0 85%; min-width: 260px; }
             .diploma-grid { grid-template-columns: repeat(2, 1fr); }
-            .photo-wrapper.portrait { height: 320px; }
+            .photo-wrapper.portrait-tall { height: 380px; }
+            .photo-wrapper.landscape-wide { height: 200px; }
             .photo-wrapper.vertical { height: 340px; }
         }
         @media (max-width: 480px) {
             .hero h1 { font-size: 2.2rem; }
             .diploma-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
             .review-card { flex: 0 0 90%; min-width: 240px; padding: 22px 18px; }
+            .photo-wrapper.portrait-tall { height: 320px; }
+            .photo-wrapper.landscape-wide { height: 180px; }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -352,7 +372,7 @@
         </div>
     </section>
 
-    <!-- ОБО МНЕ -->
+    <!-- ОБО МНЕ — фото стало вертикальным и выше -->
     <section style="background:#FFF;" id="about">
         <div class="container">
             <span class="section-label">Обо мне</span>
@@ -364,7 +384,7 @@
                     <p style="color:var(--red); font-weight:700;">100+ женщин изменили жизнь со мной</p>
                     <p style="color:var(--text-muted); font-size:0.85rem;">Обрели сексуальность, справились с блоками, начали получать наслаждение.</p>
                 </div>
-                <div class="photo-wrapper portrait">
+                <div class="photo-wrapper portrait-tall">
                     <img src="images/photo-olesya-portrait.jpg" alt="Олеся Андросова">
                     <div class="overlay"></div>
                 </div>
@@ -378,7 +398,7 @@
         </div>
     </section>
 
-    <!-- КОНСУЛЬТАЦИИ -->
+    <!-- КОНСУЛЬТАЦИИ — фото стало шире -->
     <section class="bg-black" id="consult">
         <div class="container">
             <span class="section-label">Услуги</span>
@@ -386,7 +406,7 @@
             <div class="divider"></div>
             <div class="grid-2">
                 <div class="card featured">
-                    <div class="photo-wrapper landscape">
+                    <div class="photo-wrapper landscape-wide">
                         <img src="images/photo-consult.jpg" alt="Консультация">
                         <div class="overlay"></div>
                     </div>
@@ -453,14 +473,14 @@
         </div>
     </section>
 
-    <!-- HORNY ONLINE -->
+    <!-- HORNY ONLINE — фото стало шире -->
     <section style="background:#FFF;" id="project">
         <div class="container">
             <span class="section-label">Проект</span>
             <h2>Horny <em>Online</em></h2>
             <div class="divider"></div>
             <p style="color:var(--text-muted); margin-bottom:20px; letter-spacing:1px;">ГРУППОВОЙ ОБРАЗОВАТЕЛЬНЫЙ ПРОЕКТ</p>
-            <div class="photo-wrapper landscape">
+            <div class="photo-wrapper landscape-wide">
                 <img src="images/photo-project.jpg" alt="Horny Online">
                 <div class="overlay"></div>
             </div>
